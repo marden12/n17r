@@ -1,0 +1,6 @@
+framework module Pods_mAppTests {
+  umbrella header "Pods-mAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
