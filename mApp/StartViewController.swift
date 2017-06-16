@@ -80,7 +80,7 @@ class StartViewController: UIViewController{
         textField.autocorrectionType = .no
         textField.isEnabled = true
         return textField
-    
+        
     }()
     
     override func viewDidLoad() {
@@ -106,7 +106,7 @@ class StartViewController: UIViewController{
         firstView.addSubview(questionLabel)
         secondView.addSubview(collectionView)
     }
- 
+    
     func parseJson() throws{
         
         guard let path = Bundle.main.path(forResource: "JsonFile", ofType: "json") else {
@@ -125,17 +125,11 @@ class StartViewController: UIViewController{
             for question in questions {
                 print(question.level)
                 print(question.text)
-
+                
                 print(question.words)
-
+                
             }
-            
         }
-        
-        
-        
-        
-        print()
     }
     
     private func setupConstrains() {
@@ -151,7 +145,7 @@ class StartViewController: UIViewController{
             textField.width == firstView.width
             textField.height == 40
         }
-
+        
         constrain(secondView, collectionView) {
             $1.width == $0.width
             $1.height == $0.height/2
